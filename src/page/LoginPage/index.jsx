@@ -38,7 +38,7 @@ const LoginPage = () => {
 
 							<div className="container-login100-form-btn">
 								<button className="login100-form-btn" onclick="Evento()">
-									<a href="src/page/HomePage/index.jsx">ENTRAR</a>
+									<a href="src/page/HomePage/index.jsx">Entrar</a>
 								</button>
 							</div>
 
