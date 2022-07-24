@@ -29,13 +29,6 @@ const LoginPage = () => {
 								<span class="focus-input100" data-placeholder="&#xf207;"></span>
 							</div>
 
-							<div className="contact100-form-checkbox">
-								<input className="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
-								<label className="label-checkbox100" htmlFor="ckb1">
-									Lembre-me
-								</label>
-							</div>
-
 							<div className="container-login100-form-btn">
 								<button className="login100-form-btn" onclick="Evento()">
 									<a href="src/page/HomePage/index.jsx">Entrar</a>
