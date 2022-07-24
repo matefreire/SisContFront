@@ -7,9 +7,9 @@ const LoginPage = () => {
 	return (
 		<div>
 			<div className="limiter">
-				<div className="container-login100" style={{ backgroundImage: 'url("images/usua.png")' }}>
+				<div className="container-login100">
 					<div className="wrap-login100">
-						<form className="login100-form validate-form">
+						<form method="POST"> 
 
 							<span className="login100-form-logo">
 								<i className="zmdi zmdi-landscape">SisCont</i>
@@ -19,26 +19,21 @@ const LoginPage = () => {
 								Logar
 							</span>
 
-							<div className="wrap-input100 validate-input" data-validate="Enter username">
+							<div className="wrap-input100 validate-input">
 								<input className="input100" type="text" name="username" placeholder="Usuario" />
 								<span class="focus-input100" data-placeholder="&#xf207;"></span>
 							</div>
 
-							<div className="wrap-input100 validate-input" data-validate="Enter password">
+							<div className="wrap-input100 validate-input">
 								<input className="input100" type="password" name="pass" placeholder="Senha" />
 								<span class="focus-input100" data-placeholder="&#xf207;"></span>
 							</div>
 
-							<div className="container-login100-form-btn">
-								<button className="login100-form-btn" onclick="Evento()">
-									<a href="src/page/HomePage/index.jsx">Entrar</a>
-								</button>
-							</div>
 
-							<div className="text-center p-t-90">
-								<a className="txt1" href="#">
-									Esqueceu a senha??
-								</a>
+							<div className="container-login100-form-btn">
+								<button type="submit" className="login100-form-btn">
+									Entrar
+								</button>
 							</div>
 
 						</form>

@@ -1,7 +1,4 @@
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
 * {
     margin: 0px;
     padding: 0px;
@@ -13,9 +10,6 @@ html {
     height: 100%;
     font-family: Poppins-Regular, sans-serif;
 }
-
-
-/*---------------------------------------------*/
 
 a {
     font-family: Poppins-Regular;
@@ -37,9 +31,6 @@ a:hover {
     text-decoration: none;
     color: #fff;
 }
-
-
-/*---------------------------------------------*/
 
 h1,
 h2,
@@ -64,8 +55,6 @@ li {
     list-style-type: none;
 }
 
-
-/*---------------------------------------------*/
 
 input {
     outline: none;
@@ -152,8 +141,6 @@ label {
 }
 
 
-/*---------------------------------------------*/
-
 button {
     outline: none !important;
     border: none;
@@ -168,20 +155,12 @@ iframe {
     border: none !important;
 }
 
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
-
 .txt1 {
     font-family: Poppins-Regular;
     font-size: 13px;
     color: #e5e5e5;
     line-height: 1.5;
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
 
 .limiter {
     width: 100%;
@@ -232,9 +211,6 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Form ]*/
-
 .login100-form {
     width: 100%;
 }
@@ -267,9 +243,6 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Input ]*/
-
 .wrap-input100 {
     width: 100%;
     position: relative;
@@ -288,9 +261,6 @@ iframe {
     background: transparent;
     padding: 0 5px 0 38px;
 }
-
-
-/*---------------------------------------------*/
 
 .focus-input100 {
     position: absolute;
@@ -361,9 +331,6 @@ iframe {
 }
 
 
-/*==================================================================
-[ Restyle Checkbox ]*/
-
 .contact100-form-checkbox {
     padding-left: 5px;
     padding-top: 5px;
@@ -415,9 +382,6 @@ iframe {
     color: #555555;
 }
 
-
-/*------------------------------------------------------------------
-[ Button ]*/
 
 .container-login100-form-btn {
     width: 100%;
@@ -476,10 +440,6 @@ iframe {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
-
-
-/*------------------------------------------------------------------
-[ Responsive ]*/
 
 @media (max-width: 576px) {
     .wrap-login100 {
