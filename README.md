@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# SisCont
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Alunos: Mateus Silva Freire e Matheus Duarte Queiroz
 
-## Available Scripts
+Banco de dados escolhido - PostgresSQL
 
-In the project directory, you can run:
+Comando de criação de banco/tabelas:
 
-### `yarn start`
+```
+CREATE DATABASE SisCont;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+USE SisCont;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+CREATE TABLE Usuarios(
+    ID serial PRIMARY KEY,
+    login VARCHAR(80) NOT NULL,
+    senha VARCHAR(80) NOT NULL
+);
 
-### `yarn test`
+CREATE TABLE Contas(
+    ID serial PRIMARY KEY,
+    banco VARCHAR(80) NOT NULL,
+    contaNumero VARCHAR(80) NOT NULL,
+    agencia VARCHAR(80) NOT NULL
+);
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+CREATE TABLE Despesas (
+    ID serial PRIMARY KEY,
+    descricao VARCHAR(80) NOT NULL,
+    fundo VARCHAR(80) NOT NULL,
+    valor NUMERIC(5,2) NOT NULL
+);
 
-### `yarn build`
+CREATE TABLE Despesas (
+    ID serial PRIMARY KEY,
+    descricao VARCHAR(80) NOT NULL,
+    recurso VARCHAR(80) NOT NULL,
+    orgao VARCHAR(80) NOT NULL,
+    valor NUMERIC(5,2) NOT NULL
+);
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CREATE TABLE Empenhos (
+    ID serial PRIMARY KEY,
+    descricao VARCHAR(80) NOT NULL,
+    despesa VARCHAR(80) NOT NULL,
+    valor NUMERIC(5,2) NOT NULL
+);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+CREATE TABLE Liquidacoes (
+    ID serial PRIMARY KEY,
+    descricao VARCHAR(80) NOT NULL,
+    empenho VARCHAR(80) NOT NULL,
+    valor NUMERIC(5,2) NOT NULL
+);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CREATE TABLE Pagamento (
+    ID serial PRIMARY KEY,
+    descricao VARCHAR(80) NOT NULL,
+    liquidacao VARCHAR(80) NOT NULL,
+    valor NUMERIC(5,2) NOT NULL
+);
 
-### `yarn eject`
+CREATE TABLE Estoque (
+    ID serial PRIMARY KEY,
+    produto VARCHAR(80) NOT NULL,
+    quantidade numeric(4,0) NOT NULL,
+    valorCusto NUMERIC(5,2) NOT NULL
+);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CREATE TABLE Vendas (
+    ID serial PRIMARY KEY,
+    cliente VARCHAR(80) NOT NULL,
+    produto VARCHAR(80) NOT NULL,
+    quantidade NUMERIC(4,0) NOT NULL
+);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CREATE TABLE Clientes (
+    ID serial PRIMARY KEY,
+    nome VARCHAR(80) NOT NULL,
+    cpf VARCHAR(80) NOT NULL,
+    email VARCHAR(80) NOT NULL
+);
+```
