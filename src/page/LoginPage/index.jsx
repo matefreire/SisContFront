@@ -9,7 +9,7 @@ const LoginPage = () => {
 			<div className="limiter">
 				<div className="container-login100">
 					<div className="wrap-login100">
-						<form method="POST"> 
+						<form method="POST" action=""> 
 
 							<span className="login100-form-logo">
 								<i className="zmdi zmdi-landscape">SisCont</i>
